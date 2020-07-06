@@ -3,14 +3,14 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: mydemoapp
-  labels:
-    app: mydemoapp
+ name: mydemoapp
+ labels:
+  app: mydemoapp
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: mydemoapp
+ replicas: 1
+ selector:
+  matchLabels:
+   app: mydemoapp
   template:
     metadata:
       labels:
