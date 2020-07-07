@@ -27,14 +27,16 @@ pipeline {
 		stage('Build Docker Image') { 
 			steps {
 				script {
-					myapp = docker.build("sandipmishra/k8sdemo:${env.BUILD_ID}")
+					//myapp = docker.build("sandipmishra/k8sdemo:${env.BUILD_ID}")
+					myapp = docker.build("eu.gcr.io/sunny-truth-282008/sandipmishra/k8-gcr-demo:${env.BUILD_ID}")
 				}
 			}
 		}
 		stage('Push Docker Image') {
 			steps {
 				script {
-					docker.withRegistry('https://registry.hub.docker.com', 'Docker') {
+					//docker.withRegistry('https://registry.hub.docker.com', 'Docker') {
+					docker.withRegistry('https://eu.gcr.io'){
 						myapp.push("${env.BUILD_ID}")		
 					}
 				}
@@ -52,3 +54,4 @@ pipeline {
 		}
 	}
 }
+
