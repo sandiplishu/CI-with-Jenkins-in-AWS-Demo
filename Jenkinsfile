@@ -39,7 +39,7 @@ pipeline {
 					}
 				}
 			}
-		}f
+		}
 		stage('Deploy to K8s') { 
 			steps {
 				echo "Deployment started ..."
