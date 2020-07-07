@@ -4,7 +4,7 @@ pipeline {
         PROJECT_ID = 'sunny-truth-282008'
         CLUSTER_NAME = 'k8cluster-sandip'
         LOCATION = 'europe-west1-b'
-        CREDENTIALS_ID = 'k8'
+        CREDENTIALS_ID = 'K8'
 	}
 	stages {	
 		stage('SCM Checkout') {            
