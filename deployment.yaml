@@ -32,5 +32,5 @@ spec:
   app: demok8deployment
  ports:
   - protocol: TCP
-    port: 5566
+    port: 5602
     targetPort: 8080
