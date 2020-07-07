@@ -17,7 +17,7 @@ spec:
   spec:
    containers:
    - name: demo-k8-gcr-deployment
-     image: eu.gcr.io/sunny-truth-282008/sandipmishra/k8gcrdemo:tagversion
+     image: eu.gcr.io/sunny-truth-282008/sandipmishra/k8-gcr-demo:tagversion
      ports:
      - containerPort: 8080
 
