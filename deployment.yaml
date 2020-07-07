@@ -2,22 +2,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
- name: demok8deployment
+ name: demo-k8-gcr-deployment
  labels:
-   app: demok8deployment
+   app: demo-k8-gcr-deployment
 spec:
  replicas: 1
  selector:
   matchLabels:
-   app: demok8deployment
+   app: demo-k8-gcr-deployment
  template:
   metadata:
    labels:
-    app: demok8deployment
+    app: demo-k8-gcr-deployment
   spec:
    containers:
-   - name: demok8deployment
-     image: sandipmishra/k8sdemo:tagversion
+   - name: demo-k8-gcr-deployment
+     image: eu.gcr.io/sunny-truth-282008/sandipmishra/k8gcrdemo:tagversion
      ports:
      - containerPort: 8080
 
@@ -25,12 +25,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
- name: demok8deployment
+ name: demo-k8-gcr-deployment
 spec:
  type: LoadBalancer
  selector:
-  app: demok8deployment
+  app: demo-k8-gcr-deployment
  ports:
   - protocol: TCP
-    port: 5602
+    port: 5566
     targetPort: 8080
