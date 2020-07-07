@@ -2,7 +2,7 @@ pipeline {
 	agent any 	
 	environment {
         PROJECT_ID = 'sunny-truth-282008'
-        CLUSTER_NAME = 'k8cluster-sandip'
+        CLUSTER_NAME = 'sandip-kub-cluster'
         LOCATION = 'europe-west1-b'
         CREDENTIALS_ID = 'K8'
 	}
