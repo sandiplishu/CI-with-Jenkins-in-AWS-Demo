@@ -17,7 +17,7 @@ spec:
   spec:
    containers:
    - name: demok8deployment
-     image: sandipmishra/:tagversion
+     image: sandipmishra/k8sdemo:tagversion
      ports:
      - containerPort: 8080
 
