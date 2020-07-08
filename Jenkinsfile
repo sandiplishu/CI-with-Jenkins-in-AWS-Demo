@@ -28,7 +28,7 @@ pipeline {
 			steps {
 				script {
 					//myapp = docker.build("sandipmishra/k8sdemo:${env.BUILD_ID}")
-					myapp = docker.build("eu.gcr.io/sunny-truth-282008/mishra_sandip012/k8-gcr-demo:${env.BUILD_ID}")
+					myapp = docker.build("eu.gcr.io/sunny-truth-282008/sandipmishra/k8-gcr-demo:${env.BUILD_ID}")
 				}
 			}
 		}
