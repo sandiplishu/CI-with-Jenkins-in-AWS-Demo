@@ -26,6 +26,8 @@ pipeline {
 		}
 		stage('Build Docker Image') { 
 			steps {
+				echo "running as user"
+				whoami
 				script {
 					//myapp = docker.build("sandipmishra/k8sdemo:${env.BUILD_ID}")
 					myapp = docker.build("eu.gcr.io/sunny-truth-282008/sandipmishra/k8-gcr-demo:${env.BUILD_ID}")
