@@ -28,7 +28,7 @@ pipeline {
 			steps {
 				script {
 					//myapp = docker.build("sandipmishra/k8sdemo:${env.BUILD_ID}")
-					myapp = docker.build("eu.gcr.io/sunny-truth-282008/mishra_sandip012/k8-gcr-demo:${env.BUILD_ID}")
+					myapp = docker.build("eu.gcr.io/sunny-truth-282008/k8gcr/k8-gcr-demo:${env.BUILD_ID}")
 				}
 			}
 		}
@@ -36,7 +36,7 @@ pipeline {
 			steps {
 				script {
 					//docker.withRegistry('https://registry.hub.docker.com', 'Docker') {
-					docker.withRegistry('https://eu.gcr.io'){
+					docker.withRegistry('https://eu.gcr.io','k8gcr'){
 						myapp.push("${env.BUILD_ID}")		
 					}
 				}
